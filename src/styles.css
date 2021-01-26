@@ -1,4 +1,11 @@
-.App {
+body {
   font-family: sans-serif;
+  background: linear-gradient(to top right, darkred, darkorange);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.center {
   text-align: center;
 }
