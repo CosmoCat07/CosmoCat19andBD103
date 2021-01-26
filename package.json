@@ -1,7 +1,7 @@
 {
-  "name": "cosmocat19-and-bd103",
+  "name": "cosmocat19-bd103",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website created by CosmoCat19 and BD103 for the 2021 PA State Media and Design Fair",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
