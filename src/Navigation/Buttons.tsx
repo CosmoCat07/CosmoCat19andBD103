@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 
 interface ButtonProps {
   data: string;
   link: string;
-  parentWidth?: number;
+  width?: number;
 }
 interface ButtonState {
   style: Object;
@@ -16,7 +15,7 @@ export default class NavButton extends Component<ButtonProps, ButtonState> {
     // STYLE
     this.state = {
       style: {
-        flexBasis: this.props.parentWidth,
+        flexBasis: `${this.props.width}px`,
         display: "inline-block",
         fontSize: "20px",
         lineHeight: "40px",
@@ -30,14 +29,16 @@ export default class NavButton extends Component<ButtonProps, ButtonState> {
         textDecoration: "none"
       }
     };
+    console.log(this.state.style);
   }
+  goToLink = () => {
+    window.location.assign(this.props.link);
+  };
   render() {
     return (
-      <Router>
-        <Link to="/about" style={this.state.style} className="center">
-          {this.props.data}
-        </Link>
-      </Router>
+      <div style={this.state.style} onClick={this.goToLink}>
+        {this.props.data}
+      </div>
     );
   }
 }
